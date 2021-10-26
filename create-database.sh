@@ -6,8 +6,8 @@ STOCK_DB=evergreen;
 DB_STAMP=1305;
 DATA_SOURCE_STAMP=1305;
 DATA_DB="eg_$DB_STAMP";
-SCHEMA_EXPORT="/tmp/eg-$DB_STAMP.schema.sql"
-DATASET_FILE="datasets/eg-$DATA_SOURCE_STAMP.data.sql"
+SCHEMA_EXPORT="/tmp/eg-$DB_STAMP.schema.archive"
+DATASET_FILE="datasets/eg-$DATA_SOURCE_STAMP.data.archive"
 
 echo "Extracting schema from stock EG database '$STOCK_DB'"
 pg_dump -U $PGUSER --schema-only --format custom --file $SCHEMA_EXPORT $STOCK_DB
